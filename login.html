@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Login</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome para os ícones -->
-  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome atualizado -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
@@ -16,13 +16,16 @@
 
       <div class="form-wrap">
         <form action="#" onsubmit="return false" style="width:100%">
+          
+          <!-- Campo de Email com ícone -->
           <div class="field">
-            <div class="icon"><i class="fas fa-at"></i></div>
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
             <input type="email" placeholder="Email" required />
           </div>
 
+          <!-- Campo de Senha com ícone -->
           <div class="field">
-            <div class="icon"><i class="fas fa-lock"></i></div>
+            <div class="icon"><i class="fa-solid fa-lock"></i></div>
             <input type="password" placeholder="Senha" required />
           </div>
 
@@ -37,7 +40,7 @@
       </div>
     </div>
 
-    <!-- Painel da direita: imagem roxa. Troque o caminho para sua imagem em img/fundo-right.png -->
+    <!-- Painel da direita -->
     <div class="right" style="background-image: url('images/fundo.jpg');"></div>
   </div>
 </body>
