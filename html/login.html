@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cadastro</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/style.css" />
   <!-- Font Awesome atualizado -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
   <div class="container">
+    <!-- Painel branco à esquerda -->
     <div class="left">
-      <div class="heading">CADASTRO</div>
+      <div class="heading">LOGIN</div>
 
       <div class="form-wrap">
         <form action="#" onsubmit="return false" style="width:100%">
-          
-          <!-- Nome completo -->
-          <div class="field">
-            <div class="icon"><i class="fa-solid fa-user"></i></div>
-            <input type="text" placeholder="Nome completo" required />
-          </div>
 
-          <!-- Email -->
+          <!-- Campo de Email com ícone -->
           <div class="field">
             <div class="icon"><i class="fa-solid fa-envelope"></i></div>
             <input type="email" placeholder="Email" required />
           </div>
 
-          <!-- Senha -->
+          <!-- Campo de Senha com ícone -->
           <div class="field">
             <div class="icon"><i class="fa-solid fa-lock"></i></div>
             <input type="password" placeholder="Senha" required />
           </div>
 
-          <!-- Repetir senha -->
-          <div class="field">
-            <div class="icon"><i class="fa-solid fa-lock"></i></div>
-            <input type="password" placeholder="Repetir senha" required />
-          </div>
-
           <div style="display:flex;justify-content:center">
-            <button class="btn" type="submit">CADASTRAR</button>
+            <button class="btn" type="submit">LOGIN</button>
           </div>
         </form>
 
         <div class="bottom-note" style="text-align:center;">
-          Já tem uma conta? <a href="login.html">Entrar</a>
+          Novo por aqui? <a href="cadastro.html">Criar uma conta</a>
         </div>
       </div>
     </div>
 
-    <div class="right" style="background-image: url('images/fundo.jpg');"></div>
+    <!-- Painel da direita -->
+    <div class="right" style="background-image: url('../images/fundo.jpg');"></div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>

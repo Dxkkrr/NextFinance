@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Painel esquerdo -->
+    <div class="left">
+      <h1 class="heading">CADASTRO</h1>
+      <div class="form-wrap">
+        <form id="formCadastro" style="width:100%" onsubmit="return false">
+          <div class="field">
+            <div class="icon"><i class="fa-solid fa-user"></i></div>
+            <input type="text" id="Nome" placeholder="Nome completo" required />
+          </div>
+          <div class="field">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <input type="email" id="Email" placeholder="Email" required />
+          </div>
+          <div class="field">
+            <div class="icon"><i class="fa-solid fa-lock"></i></div>
+            <input type="password" id="Senha" placeholder="Senha" required />
+          </div>
+          <div style="display:flex; justify-content:center">
+            <button class="btn" type="button" id="btnCadastrar">CADASTRAR</button>
+          </div>
+        </form>
+
+        <div id="mensagem" class="mensagem"></div>
+
+        <p class="bottom-note">
+          Já tem uma conta? <a href="login.html">Entrar</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Painel direito -->
+    <div class="right" style="background-image: url('../images/fundo.jpg');"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
