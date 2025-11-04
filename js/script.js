@@ -12,7 +12,7 @@ function validarCampos(nome, email, senha) {
   return null;
 }
 
-// Cadastro de cliente
+// Cadastro do Cliente
 async function cadastrar() {
   const nome = document.getElementById('Nome').value.trim();
   const email = document.getElementById('Email').value.trim();
@@ -51,6 +51,61 @@ async function cadastrar() {
     msg.textContent = 'Cadastro feito com sucesso! Redirecionando...';
 
     setTimeout(() => {
+      window.location.href = 'login.html';
+    }, 1500);
+
+  } catch (err) {
+    msg.textContent = 'Erro: ' + err.message;
+  }
+}
+
+// Event listener no botão de cadastro
+document.getElementById('btnCadastrar')?.addEventListener('click', cadastrar);
+
+
+// Login do Cliente
+async function login() {
+  const email = document.getElementById('EmailLogin').value.trim();
+  const senha = document.getElementById('SenhaLogin').value;
+  const msg = document.getElementById('mensagemLogin');
+
+  msg.textContent = '';
+  msg.style.color = 'red';
+
+  if (!email) {
+    msg.textContent = 'Preencha o campo Email.';
+    return;
+  }
+
+  if (!senha) {
+    msg.textContent = 'Preencha o campo Senha.';
+    return;
+  }
+
+  try {
+    const { data: cliente, error } = await db
+      .from('clientes')
+      .select('*')
+      .eq('email', email)
+      .limit(1)
+      .single();
+
+    if (error && error.code !== 'PGRST116') throw error;
+
+    if (!cliente) {
+      msg.textContent = 'Cadastro não encontrado. Faça seu cadastro primeiro.';
+      return;
+    }
+
+    if (cliente.senha !== senha) {
+      msg.textContent = 'Senha incorreta.';
+      return;
+    }
+
+    msg.style.color = 'green';
+    msg.textContent = 'Login efetuado com sucesso! Redirecionando...';
+
+    setTimeout(() => {
       window.location.href = 'initpage.html';
     }, 1500);
 
@@ -59,5 +114,5 @@ async function cadastrar() {
   }
 }
 
-// Event listener no botão
-document.getElementById('btnCadastrar').addEventListener('click', cadastrar);
+// Event listener no botão de login
+document.getElementById('btnLogin')?.addEventListener('click', login);
