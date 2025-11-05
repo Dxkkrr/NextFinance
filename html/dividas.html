@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dívidas</title>
+  <link rel="stylesheet" href="../css/dividas_nav.css" />
+  <link rel="stylesheet" href="../css/dividas.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="../html/initpage.html">
+        <img src="../images/Logo.svg" alt="Logo NextFinance" class="logo" />
+      </a>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#">Dívidas Vencidas</a>
+      <a href="#">Gráfico</a>
+      <a href="#">Estoque</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Página Principal -->
+  <main class="principal">
+    <div id="title">DÍVIDAS</div>
+    <div id="searchbar" class="search-container">
+      <div class="search-wrapper">
+        <input type="text" placeholder="Pesquise por nome do cliente" class="search-input" />
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <button class="add-btn">ADICIONAR DÍVIDA</button>
+    </div>
+  </main>
+
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+  <script src="../js/dividas.js"></script>
+</body>
+</html>
